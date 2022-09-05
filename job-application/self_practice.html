@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link of style.css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        label {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .grid {
+            display: grid;
+
+        }
+
+        .grid-2 {
+            grid-template-columns: 2;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+
+        .header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+        }
+
+        .small-title {
+            text-align: 0;
+            font-size: 1.5rem;
+        }
+
+
+
+        .col1-2 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .col2-3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    </style>
+    <title>Job Application</title>
+</head>
+
+<body>
+    <section class="header">
+        <h1>Job Application
+            <span class="small-title">(Web)</span>
+        </h1>
+    </section>
+
+
+    <div class="form">
+        <div class="grid col-2 name">
+            <div class="fname col1-2">
+                <label for="fname">First Name</label>
+                <br>
+                <input type="text" name="fname" id="fname">
+            </div>
+
+            <div class="lname col2-3">
+                <label for="lname">Last Name</label>
+                <br>
+                <input type="text" name="lname" id="lname">
+            </div>
+        </div>
+
+
+        <div class="form-control grid col-2">
+            <div class="email">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="job-role  col2-3">
+                <label for="Job Role">Job Role</label>
+                <br>
+                <select name="dropdown" id="dropdown">
+                    <option value="Computer Architecture" selected>Computer Architecture</option>
+                    <option value="Java">Java</option>
+                    <option value="Python Developer">Python Developer</option>
+                </select>
+            </div>
+        </div>
+        <div class="address">
+            <label for="adress">Adress</label>
+            <br>
+            <textarea id="address" name="address" row="4" cols="50" placeholder="Enter Address"></textarea>
+        </div>
+
+
+        <div class="form-control grid col-2">
+            <div class="city">
+                <label for="city">City</label>
+                <br>
+                <input type="text" name="city" id="city">
+            </div>
+
+            <div class="pincode  col2-3">
+                <label for="pincode">Pincode</label>
+                <br>
+                <input type="number" name="pincode" id="pincode">
+            </div>
+        </div>
+
+        <div class="form-control flex last-input">
+            <div class="date col1-2">
+                <label for="date">Start Date</label>
+                <br>
+                <input type="date" name="date" id="date">
+            </div>
+
+            <div class="cv  col2-3">
+                <label for="cv">Upload Your Cv</label>
+                <br>
+                <input type="file" name="file" id="file">
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <button type="submit">Apply Now</button>
+    </footer>
+
+
+
+</body>
+
+</html>
